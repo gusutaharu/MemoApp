@@ -2,8 +2,14 @@
 {
   const text = document.getElementById('text');
   const save = document.getElementById('save');
+  const message = document.getElementById('message');
+
 
   save.addEventListener('click',()=>{
-    alert(text.value);
+    message.classList.add('appear');
+    setTimeout(() => {
+      message.classList.remove('appear');
+    }, 1000);
+    localStorage.setItem('memo',text.value);
   });
 }
