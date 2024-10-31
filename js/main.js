@@ -1,10 +1,9 @@
 'use strict'
 {
-  const form = document.querySelector('form');
-  const textarea = document.querySelector('textarea');
+  const text = document.getElementById('text');
+  const save = document.getElementById('save');
 
-  form.addEventListener('submit',(e)=>{
-    e.preventDefault();
-  
+  save.addEventListener('click',()=>{
+    alert(text.value);
   });
 }
